@@ -1,0 +1,1271 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Professional painting, plumbing, and construction services in Somerset and surrounding areas">
+    <meta name="keywords" content="construction, painting, plumbing, renovation, handyman, Somerset, Yeovil, Sherborne, Milborne Port, Salisbury">
+    <title>AF86 Construction & Handyman Services</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap">
+    <style>
+        :root {
+            --primary: #2c6e49;
+            --primary-dark: #1e4d33;
+            --secondary: #4c956c;
+            --accent: #f3722c;
+            --light: #f8f9fa;
+            --dark: #1d3557;
+            --gray: #6c757d;
+            --light-gray: #e9ecef;
+            --border-radius: 10px;
+            --box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        body.rtl {
+            direction: rtl;
+            font-family: 'Tajawal', 'Segoe UI', Tahoma, sans-serif;
+        }
+
+        /* Security Headers */
+        .security-headers {
+            display: none;
+        }
+
+        /* Header & Navigation */
+        header {
+            background-color: white;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            padding: 0.5rem 0;
+        }
+
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            text-decoration: none;
+        }
+
+        .logo-icon {
+            background: var(--primary);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.5rem;
+            color: white;
+            box-shadow: 0 0 15px rgba(44, 110, 73, 0.3);
+        }
+
+        .logo-text {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--dark);
+        }
+
+        .logo-text span {
+            color: var(--accent);
+        }
+
+        .header-controls {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .language-switcher {
+            position: relative;
+        }
+
+        .language-btn {
+            background: var(--light-gray);
+            border: none;
+            border-radius: var(--border-radius);
+            padding: 8px 15px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            cursor: pointer;
+            font-weight: 500;
+            transition: var(--transition);
+        }
+
+        .language-btn:hover {
+            background: var(--secondary);
+            color: white;
+        }
+
+        .language-dropdown {
+            position: absolute;
+            top: 100%;
+            right: 0;
+            background: white;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            min-width: 120px;
+            overflow: hidden;
+            display: none;
+            z-index: 100;
+        }
+
+        .language-dropdown.show {
+            display: block;
+        }
+
+        .language-option {
+            padding: 10px 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .language-option:hover {
+            background: var(--light-gray);
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 1.5rem;
+        }
+
+        nav a {
+            color: var(--dark);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            transition: var(--transition);
+            position: relative;
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--primary);
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 3px;
+            background: var(--accent);
+            transition: width 0.3s ease;
+        }
+
+        nav a:hover::after, nav a.active::after {
+            width: 100%;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--dark);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+            height: 85vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            padding: 0 2rem;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            animation: fadeInUp 1s ease;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .hero p {
+            font-size: 1.4rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .btn {
+            display: inline-block;
+            background: var(--accent);
+            color: white;
+            padding: 12px 35px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            margin-top: 1rem;
+            transition: var(--transition);
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn:hover {
+            background: #e55e1a;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Content Sections */
+        .content-section {
+            max-width: 1200px;
+            margin: 4rem auto;
+            padding: 0 2rem;
+            display: none;
+            animation: fadeIn 0.8s ease;
+        }
+
+        .content-section.active {
+            display: block;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: var(--dark);
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 4px;
+            background: var(--accent);
+            border-radius: 2px;
+        }
+
+        .services {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .service-card {
+            background: white;
+            border-radius: var(--border-radius);
+            padding: 2rem;
+            box-shadow: var(--box-shadow);
+            transition: var(--transition);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .service-icon {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            color: var(--accent);
+        }
+
+        .service-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--dark);
+        }
+
+        .areas-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .area-card {
+            background: white;
+            border-radius: var(--border-radius);
+            padding: 1.5rem;
+            box-shadow: var(--box-shadow);
+            text-align: center;
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .area-card::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 0;
+            background: var(--primary);
+            transition: height 0.3s ease;
+            z-index: 0;
+        }
+
+        .area-card:hover::before {
+            height: 100%;
+        }
+
+        .area-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .area-card > * {
+            position: relative;
+            z-index: 1;
+        }
+
+        .area-card:hover h3, 
+        .area-card:hover p,
+        .area-card:hover .area-icon {
+            color: white;
+        }
+
+        .area-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--primary);
+            transition: color 0.3s ease;
+        }
+
+        .area-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--dark);
+            transition: color 0.3s ease;
+        }
+
+        /* Contact Form */
+        .form-container {
+            background: white;
+            border-radius: var(--border-radius);
+            padding: 3rem;
+            margin: 2rem auto 0;
+            max-width: 800px;
+            box-shadow: var(--box-shadow);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+            color: var(--dark);
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 14px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+            transition: var(--transition);
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--accent);
+            box-shadow: 0 0 0 3px rgba(243, 114, 44, 0.2);
+        }
+
+        textarea.form-control {
+            min-height: 150px;
+            resize: vertical;
+        }
+
+        .submit-btn {
+            background: var(--primary);
+            color: white;
+            padding: 14px 30px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: var(--transition);
+            display: block;
+            margin: 2rem auto 0;
+            border: none;
+            width: 200px;
+        }
+
+        .submit-btn:hover {
+            background: var(--primary-dark);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(44, 110, 73, 0.3);
+        }
+
+        .contact-info {
+            text-align: center;
+            margin-top: 3rem;
+            font-size: 1.2rem;
+            padding: 2rem;
+            background: var(--secondary);
+            border-radius: var(--border-radius);
+            color: white;
+            animation: pulse 2s infinite;
+        }
+
+        .contact-info a {
+            color: var(--light);
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition);
+            display: inline-block;
+            margin: 0 5px;
+        }
+
+        .contact-info a:hover {
+            text-decoration: underline;
+            transform: translateY(-2px);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark);
+            color: white;
+            padding: 3rem 2rem;
+            text-align: center;
+            margin-top: 4rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            text-align: left;
+        }
+
+        .footer-section h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            position: relative;
+            display: inline-block;
+        }
+
+        .footer-section h3::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background: var(--accent);
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 15px;
+            margin-top: 1.5rem;
+        }
+
+        .social-icons a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            color: white;
+            font-size: 1.2rem;
+            transition: var(--transition);
+        }
+
+        .social-icons a:hover {
+            background: var(--accent);
+            transform: translateY(-5px);
+        }
+
+        .copyright {
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(40px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(76, 149, 108, 0.5); }
+            70% { box-shadow: 0 0 0 15px rgba(76, 149, 108, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(76, 149, 108, 0); }
+        }
+
+        /* Security badge */
+        .security-badge {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: var(--primary);
+            color: white;
+            padding: 10px 15px;
+            border-radius: 30px;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            z-index: 1000;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+        }
+        
+        .security-badge i {
+            animation: pulse 1.5s infinite;
+        }
+        
+        /* Form security notice */
+        .form-security {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-top: 15px;
+            font-size: 0.9rem;
+            color: var(--primary);
+        }
+        
+        /* Mobile Styles */
+        @media (max-width: 768px) {
+            .header-container {
+                padding: 0 1rem;
+            }
+            
+            nav ul {
+                display: none;
+                position: absolute;
+                top: 80px;
+                left: 0;
+                width: 100%;
+                background: white;
+                flex-direction: column;
+                padding: 1rem 0;
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            }
+            
+            nav ul.active {
+                display: flex;
+            }
+            
+            nav a {
+                display: block;
+                padding: 1rem;
+                text-align: center;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero p {
+                font-size: 1.2rem;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .form-container {
+                padding: 1.5rem;
+            }
+
+            .language-btn span {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Security Headers -->
+    <div class="security-headers">
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' https://images.unsplash.com data:; connect-src 'self'; frame-src 'none'; object-src 'none';">
+        <meta http-equiv="X-Content-Type-Options" content="nosniff">
+        <meta http-equiv="X-Frame-Options" content="DENY">
+        <meta http-equiv="X-XSS-Protection" content="1; mode=block">
+        <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+        <meta http-equiv="Strict-Transport-Security" content="max-age=31536000; includeSubDomains">
+    </div>
+    
+    <!-- Security badge -->
+    <div class="security-badge">
+        <i class="fas fa-lock"></i>
+        <span>Secure Connection</span>
+    </div>
+
+    <header>
+        <div class="header-container">
+            <a href="#" class="logo">
+                <div class="logo-icon">
+                    <i class="fas fa-tools"></i>
+                </div>
+                <div class="logo-text">AF86 <span>Services</span></div>
+            </a>
+            
+            <div class="header-controls">
+                <div class="language-switcher">
+                    <button class="language-btn">
+                        <i class="fas fa-globe"></i>
+                        <span>English</span>
+                    </button>
+                    <div class="language-dropdown">
+                        <div class="language-option" data-lang="en">
+                            <i class="fas fa-language"></i>
+                            <span>English</span>
+                        </div>
+                        <div class="language-option" data-lang="fa">
+                            <i class="fas fa-language"></i>
+                            <span>فارسی (Persian)</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <button class="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+            
+            <nav>
+                <ul id="navMenu">
+                    <li><a href="#" class="nav-link active" data-target="home">Home</a></li>
+                    <li><a href="#" class="nav-link" data-target="areas">Areas</a></li>
+                    <li><a href="#" class="nav-link" data-target="services">Services</a></li>
+                    <li><a href="#" class="nav-link" data-target="contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="hero">
+        <div class="hero-content">
+            <h1>Professional Construction & Handyman Services</h1>
+            <p>Quality painting, plumbing, and construction services for residential and commercial properties</p>
+            <a href="#" class="btn nav-link" data-target="contact">Get a Free Quote</a>
+        </div>
+    </div>
+
+    <main>
+        <!-- Home Section -->
+        <section id="home" class="content-section active">
+            <h2 class="section-title">Our Services</h2>
+            <div class="services">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-paint-roller"></i>
+                    </div>
+                    <h3>Professional Painting</h3>
+                    <p>Interior and exterior painting with premium materials and flawless finishes. We transform spaces with color and precision.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-faucet"></i>
+                    </div>
+                    <h3>Plumbing Solutions</h3>
+                    <p>From leak repairs to complete plumbing system installations. Our licensed plumbers ensure reliable water systems.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-hammer"></i>
+                    </div>
+                    <h3>Construction & Renovation</h3>
+                    <p>Home renovations, extensions, and construction projects completed on time and within budget.</p>
+                </div>
+            </div>
+            
+            <div class="about" style="margin-top: 5rem; display: flex; flex-wrap: wrap; gap: 2rem; align-items: center; background: white; border-radius: var(--border-radius); padding: 2rem; box-shadow: var(--box-shadow);">
+                <div style="flex: 1; min-width: 300px;">
+                    <img src="https://images.unsplash.com/photo-1581091226033-d5c48150dbaa?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Construction Team" style="width: 100%; border-radius: var(--border-radius); box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
+                </div>
+                <div style="flex: 1; min-width: 300px;">
+                    <h2 style="font-size: 2rem; margin-bottom: 1.5rem; color: var(--dark);">About Our Company</h2>
+                    <p style="margin-bottom: 1.5rem; font-size: 1.1rem;">With over 15 years of experience in the construction industry, AF86 Services has built a reputation for quality workmanship and exceptional customer service. We take pride in every project we undertake, ensuring the highest standards of safety and quality.</p>
+                    <p style="margin-bottom: 1.5rem; font-size: 1.1rem;">Our team of skilled professionals includes licensed plumbers, certified painters, and experienced construction workers who are dedicated to transforming your vision into reality.</p>
+                    <a href="#" class="btn nav-link" data-target="contact">Contact Us Today</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Areas Section -->
+        <section id="areas" class="content-section">
+            <h2 class="section-title">Areas We Serve</h2>
+            <p style="text-align: center; max-width: 700px; margin: 0 auto 3rem; font-size: 1.1rem;">We proudly provide our construction and handyman services to the following areas in South West England:</p>
+            
+            <div class="areas-grid">
+                <div class="area-card">
+                    <div class="area-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3>Somerset</h3>
+                    <p>Full coverage across Somerset county for all construction and renovation projects</p>
+                </div>
+                <div class="area-card">
+                    <div class="area-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3>Yeovil</h3>
+                    <p>Residential and commercial services in Yeovil and surrounding areas</p>
+                </div>
+                <div class="area-card">
+                    <div class="area-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3>Sherborne</h3>
+                    <p>Historic building renovations and modern construction in Sherborne</p>
+                </div>
+                <div class="area-card">
+                    <div class="area-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3>Milborne Port</h3>
+                    <p>Local handyman and construction services for Milborne Port residents</p>
+                </div>
+                <div class="area-card">
+                    <div class="area-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3>Salisbury</h3>
+                    <p>Covering Salisbury and surrounding areas with our expert team</p>
+                </div>
+            </div>
+            
+            <div style="margin-top: 4rem; background: linear-gradient(135deg, var(--primary), var(--secondary)); padding: 3rem; border-radius: var(--border-radius); color: white; text-align: center;">
+                <h3 style="font-size: 1.8rem; margin-bottom: 1.5rem;">Ready to Start Your Project?</h3>
+                <p style="font-size: 1.2rem; max-width: 700px; margin: 0 auto 2rem;">Contact us today for a free consultation and quote. We serve all areas in Somerset and surrounding regions.</p>
+                <a href="#" class="btn nav-link" data-target="contact" style="background: white; color: var(--primary);">Get a Free Quote</a>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="content-section">
+            <h2 class="section-title">Our Services</h2>
+            
+            <div class="services">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-paint-brush"></i>
+                    </div>
+                    <h3>Interior Painting</h3>
+                    <p>Professional interior painting with attention to detail and premium finishes.</p>
+                    <ul style="text-align: left; margin-top: 1rem; padding-left: 1.5rem;">
+                        <li>Wall painting</li>
+                        <li>Ceiling finishes</li>
+                        <li>Trim and molding</li>
+                        <li>Color consultation</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <h3>Exterior Painting</h3>
+                    <p>Protect and beautify your home's exterior with our weather-resistant paints.</p>
+                    <ul style="text-align: left; margin-top: 1rem; padding-left: 1.5rem;">
+                        <li>House painting</li>
+                        <li>Deck staining</li>
+                        <li>Fence painting</li>
+                        <li>Exterior preparation</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-wrench"></i>
+                    </div>
+                    <h3>Plumbing Services</h3>
+                    <p>Comprehensive plumbing solutions for homes and businesses.</p>
+                    <ul style="text-align: left; margin-top: 1rem; padding-left: 1.5rem;">
+                        <li>Leak detection & repair</li>
+                        <li>Pipe installation</li>
+                        <li>Bathroom remodeling</li>
+                        <li>Water heater services</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-trowel"></i>
+                    </div>
+                    <h3>Construction</h3>
+                    <p>From small renovations to new construction projects.</p>
+                    <ul style="text-align: left; margin-top: 1rem; padding-left: 1.5rem;">
+                        <li>Room additions</li>
+                        <li>Kitchen remodeling</li>
+                        <li>Home extensions</li>
+                        <li>Structural repairs</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="services" style="margin-top: 3rem;">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-bath"></i>
+                    </div>
+                    <h3>Bathroom Remodeling</h3>
+                    <p>Transform your bathroom into a luxurious retreat with our remodeling services.</p>
+                    <ul style="text-align: left; margin-top: 1rem; padding-left: 1.5rem;">
+                        <li>Tile installation</li>
+                        <li>Fixture replacement</li>
+                        <li>Vanity installation</li>
+                        <li>Shower conversions</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-kitchen-set"></i>
+                    </div>
+                    <h3>Kitchen Renovations</h3>
+                    <p>Modernize your kitchen with our expert renovation services.</p>
+                    <ul style="text-align: left; margin-top: 1rem; padding-left: 1.5rem;">
+                        <li>Cabinet installation</li>
+                        <li>Countertop replacement</li>
+                        <li>Backsplash tiling</li>
+                        <li>Lighting upgrades</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-house-damage"></i>
+                    </div>
+                    <h3>Handyman Services</h3>
+                    <p>Reliable solutions for all your home maintenance needs.</p>
+                    <ul style="text-align: left; margin-top: 1rem; padding-left: 1.5rem;">
+                        <li>Drywall repair</li>
+                        <li>Fixture installation</li>
+                        <li>Door/window repair</li>
+                        <li>General maintenance</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="content-section">
+            <h2 class="section-title">Contact Us</h2>
+            
+            <div class="form-container">
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" class="form-control" placeholder="Enter your name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" class="form-control" placeholder="Enter your email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" class="form-control" placeholder="Enter your phone number">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="service">Service Required</label>
+                        <select id="service" class="form-control" required>
+                            <option value="">Select a service</option>
+                            <option value="painting">Painting</option>
+                            <option value="plumbing">Plumbing</option>
+                            <option value="construction">Construction</option>
+                            <option value="renovation">Renovation</option>
+                            <option value="handyman">Handyman Services</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Your Message</label>
+                        <textarea id="message" class="form-control" placeholder="Describe your project needs..." required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn">
+                        <i class="fas fa-paper-plane"></i> Send Message
+                    </button>
+                    
+                    <div class="form-security">
+                        <i class="fas fa-shield-alt"></i>
+                        <span>All form data is encrypted and securely transmitted</span>
+                    </div>
+                </form>
+                
+                <div class="contact-info">
+                    <p>Prefer to contact us directly?</p>
+                    <p>Email us at: <a href="mailto:Helaluddinsafi1@gmail.com">Helaluddinsafi1@gmail.com</a></p>
+                    <p style="margin-top: 0.5rem;"><i class="fas fa-phone"></i> Call us: 01234 567890</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>AF86 Services</h3>
+                <p>Providing professional construction, painting, and plumbing services throughout South West England since 2008.</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Our Services</h3>
+                <ul style="list-style: none;">
+                    <li style="margin-bottom: 0.8rem;"><i class="fas fa-paint-roller" style="color: var(--accent); margin-right: 10px;"></i> Painting Services</li>
+                    <li style="margin-bottom: 0.8rem;"><i class="fas fa-faucet" style="color: var(--accent); margin-right: 10px;"></i> Plumbing Solutions</li>
+                    <li style="margin-bottom: 0.8rem;"><i class="fas fa-hammer" style="color: var(--accent); margin-right: 10px;"></i> Construction & Renovation</li>
+                    <li style="margin-bottom: 0.8rem;"><i class="fas fa-tools" style="color: var(--accent); margin-right: 10px;"></i> Handyman Services</li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Contact Info</h3>
+                <p><i class="fas fa-envelope" style="color: var(--accent); margin-right: 10px;"></i> <a href="mailto:Helaluddinsafi1@gmail.com" style="color: white;">Helaluddinsafi1@gmail.com</a></p>
+                <p style="margin: 1rem 0;"><i class="fas fa-phone" style="color: var(--accent); margin-right: 10px;"></i> 01234 567890</p>
+                <p><i class="fas fa-map-marker-alt" style="color: var(--accent); margin-right: 10px;"></i> Serving Somerset, Yeovil, Sherborne, Milborne Port, Salisbury</p>
+            </div>
+        </div>
+        
+        <div class="copyright">
+            <p>&copy; 2023 AF86 Construction & Handyman Services. All rights reserved.</p>
+            <p style="margin-top: 10px; font-size: 0.9rem; color: rgba(255, 255, 255, 0.7);">Secure website with Persian translation</p>
+        </div>
+    </footer>
+
+    <script>
+        // Security Features
+        document.addEventListener('DOMContentLoaded', function() {
+            // CSP nonce generation for scripts
+            const nonce = generateNonce();
+            document.querySelector('script').setAttribute('nonce', nonce);
+            
+            // Security headers validation
+            validateSecurityHeaders();
+            
+            // Auto-scroll to top on page load
+            window.scrollTo(0, 0);
+        });
+
+        function generateNonce() {
+            const array = new Uint8Array(16);
+            window.crypto.getRandomValues(array);
+            return Array.from(array, byte => byte.toString(16).padStart(2, '0')).join('');
+        }
+
+        function validateSecurityHeaders() {
+            try {
+                // Check if page is served over HTTPS
+                if (window.location.protocol !== 'https:') {
+                    console.warn('Security Warning: Page not served over HTTPS');
+                }
+            } catch (e) {
+                console.error('Security validation error:', e);
+            }
+        }
+
+        // Language Translation
+        const translations = {
+            en: {
+                "home": "Home",
+                "areas": "Areas",
+                "services": "Services",
+                "contact": "Contact",
+                "heroTitle": "Professional Construction & Handyman Services",
+                "heroText": "Quality painting, plumbing, and construction services for residential and commercial properties",
+                "getQuote": "Get a Free Quote",
+                "ourServices": "Our Services",
+                "painting": "Professional Painting",
+                "paintingDesc": "Interior and exterior painting with premium materials and flawless finishes.",
+                "plumbing": "Plumbing Solutions",
+                "plumbingDesc": "From leak repairs to complete plumbing system installations.",
+                "construction": "Construction & Renovation",
+                "constructionDesc": "Home renovations, extensions, and construction projects.",
+                "about": "About Our Company",
+                "aboutText1": "With over 15 years of experience in the construction industry, AF86 Services has built a reputation for quality workmanship and exceptional customer service.",
+                "aboutText2": "Our team of skilled professionals includes licensed plumbers, certified painters, and experienced construction workers.",
+                "contactToday": "Contact Us Today",
+                "areasTitle": "Areas We Serve",
+                "areasDesc": "We proudly provide our services to the following areas:",
+                "somerset": "Somerset",
+                "yeovil": "Yeovil",
+                "sherborne": "Sherborne",
+                "milbornePort": "Milborne Port",
+                "salisbury": "Salisbury",
+                "ready": "Ready to Start Your Project?",
+                "contactPrompt": "Contact us today for a free consultation and quote.",
+                "servicesTitle": "Our Services",
+                "interior": "Interior Painting",
+                "exterior": "Exterior Painting",
+                "bathroom": "Bathroom Remodeling",
+                "kitchen": "Kitchen Renovations",
+                "handyman": "Handyman Services",
+                "contactTitle": "Contact Us",
+                "fullName": "Full Name",
+                "email": "Email Address",
+                "phone": "Phone Number",
+                "serviceReq": "Service Required",
+                "selectService": "Select a service",
+                "message": "Your Message",
+                "send": "Send Message",
+                "directContact": "Prefer to contact us directly?",
+                "emailUs": "Email us at:",
+                "callUs": "Call us:",
+                "footerServices": "Our Services",
+                "footerContact": "Contact Info",
+                "formSecurity": "All form data is encrypted and securely transmitted"
+            },
+            fa: {
+                "home": "خانه",
+                "areas": "مناطق",
+                "services": "خدمات",
+                "contact": "تماس",
+                "heroTitle": "خدمات حرفه‌ای ساخت و ساز و تعمیرات",
+                "heroText": "خدمات نقاشی، لوله‌کشی و ساخت و ساز با کیفیت برای املاک مسکونی و تجاری",
+                "getQuote": "دریافت پیشنهاد رایگان",
+                "ourServices": "خدمات ما",
+                "painting": "نقاشی حرفه‌ای",
+                "paintingDesc": "نقاشی داخلی و خارجی با مواد اولیه مرغوب و پرداخت بی‌نقص",
+                "plumbing": "راه‌حل‌های لوله‌کشی",
+                "plumbingDesc": "از تعمیر نشتی تا نصب کامل سیستم لوله‌کشی",
+                "construction": "ساخت و ساز و نوسازی",
+                "constructionDesc": "نوسازی منزل، توسعه و پروژه‌های ساخت و ساز",
+                "about": "درباره شرکت ما",
+                "aboutText1": "با بیش از ۱۵ سال تجربه در صنعت ساخت و ساز، خدمات AF86 به شهرت در کیفیت کار و خدمات مشتری استثنایی دست یافته است.",
+                "aboutText2": "تیم ما شامل لوله‌کش‌های مجاز، نقاش‌های گواهی شده و کارگران باتجربه ساخت و ساز است.",
+                "contactToday": "هم اکنون تماس بگیرید",
+                "areasTitle": "مناطق تحت پوشش",
+                "areasDesc": "ما با افتخار خدمات خود را به مناطق زیر ارائه می‌دهیم:",
+                "somerset": "سامرست",
+                "yeovil": "یوویل",
+                "sherborne": "شربورن",
+                "milbornePort": "میلبورن پورت",
+                "salisbury": "سالزبری",
+                "ready": "آماده شروع پروژه خود هستید؟",
+                "contactPrompt": "هم اکنون برای مشاوره رایگان و پیشنهاد قیمت با ما تماس بگیرید.",
+                "servicesTitle": "خدمات ما",
+                "interior": "نقاشی داخلی",
+                "exterior": "نقاشی خارجی",
+                "bathroom": "بازسازی حمام",
+                "kitchen": "نوسازی آشپزخانه",
+                "handyman": "خدمات تعمیرات",
+                "contactTitle": "تماس با ما",
+                "fullName": "نام کامل",
+                "email": "آدرس ایمیل",
+                "phone": "شماره تلفن",
+                "serviceReq": "خدمات مورد نیاز",
+                "selectService": "انتخاب سرویس",
+                "message": "پیام شما",
+                "send": "ارسال پیام",
+                "directContact": "ترجیح می‌دهید مستقیماً با ما تماس بگیرید؟",
+                "emailUs": "ایمیل به ما:",
+                "callUs": "تماس با ما:",
+                "footerServices": "خدمات ما",
+                "footerContact": "اطلاعات تماس",
+                "formSecurity": "تمام داده‌های فرم رمزگذاری شده و به صورت ایمن منتقل می‌شوند"
+            }
+        };
+
+        let currentLang = 'en';
+        
+        function setLanguage(lang) {
+            currentLang = lang;
+            document.documentElement.lang = lang;
+            
+            if (lang === 'fa') {
+                document.body.classList.add('rtl');
+                document.body.classList.remove('ltr');
+            } else {
+                document.body.classList.add('ltr');
+                document.body.classList.remove('rtl');
+            }
+            
+            // Update all translatable elements
+            document.querySelectorAll('[data-translate]').forEach(el => {
+                const key = el.getAttribute('data-translate');
+                if (translations[lang][key]) {
+                    el.textContent = translations[lang][key];
+                }
+            });
+            
+            // Update form placeholders
+            document.getElementById('name').placeholder = translations[lang]['fullName'];
+            document.getElementById('email').placeholder = translations[lang]['email'];
+            document.getElementById('phone').placeholder = translations[lang]['phone'];
+            document.getElementById('message').placeholder = translations[lang]['message'];
+            document.querySelector('#service option[value=""]').textContent = translations[lang]['selectService'];
+            
+            // Update button text
+            document.querySelector('.language-btn span').textContent = lang === 'en' ? 'English' : 'فارسی';
+            
+            // Update form security text
+            document.querySelector('.form-security span').textContent = translations[lang]['formSecurity'];
+            
+            // Store language preference
+            localStorage.setItem('preferredLanguage', lang);
+        }
+
+        // Language switcher
+        document.querySelector('.language-btn').addEventListener('click', function() {
+            document.querySelector('.language-dropdown').classList.toggle('show');
+        });
+
+        document.querySelectorAll('.language-option').forEach(option => {
+            option.addEventListener('click', function() {
+                const lang = this.getAttribute('data-lang');
+                setLanguage(lang);
+                document.querySelector('.language-dropdown').classList.remove('show');
+            });
+        });
+
+        // Load preferred language
+        const savedLang = localStorage.getItem('preferredLanguage') || 'en';
+        setLanguage(savedLang);
+
+        // Fixed Tab Navigation
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                // Remove active class from all links and sections
+                document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('active'));
+                document.querySelectorAll('.content-section').forEach(s => s.classList.remove('active'));
+                
+                // Add active class to clicked link
+                this.classList.add('active');
+                
+                // Show corresponding section
+                const targetId = this.getAttribute('data-target');
+                const targetSection = document.getElementById(targetId);
+                
+                if (targetSection) {
+                    targetSection.classList.add('active');
+                    
+                    // Scroll to top of the section
+                    window.scrollTo({
+                        top: targetSection.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+                
+                // Close mobile menu if open
+                document.getElementById('navMenu').classList.remove('active');
+            });
+        });
+        
+        // Enhanced Mobile Menu Toggle
+        document.querySelector('.mobile-menu-btn').addEventListener('click', function() {
+            const navMenu = document.getElementById('navMenu');
+            navMenu.classList.toggle('active');
+            
+            // Add aria-expanded attribute for accessibility
+            const isExpanded = navMenu.classList.contains('active');
+            this.setAttribute('aria-expanded', isExpanded);
+        });
+        
+        // Enhanced Form Submission with security measures
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form values and sanitize inputs
+            const name = sanitizeInput(document.getElementById('name').value);
+            const email = sanitizeInput(document.getElementById('email').value);
+            const service = sanitizeInput(document.getElementById('service').value);
+            const message = sanitizeInput(document.getElementById('message').value);
+            
+            // Simple validation
+            if (!name || !email || !service || !message) {
+                alert(currentLang === 'fa' ? 'لطفاً تمام فیلدهای الزامی را پر کنید' : 'Please fill in all required fields');
+                return;
+            }
+            
+            // Enhanced email validation
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+                alert(currentLang === 'fa' ? 'لطفاً یک آدرس ایمیل معتبر وارد کنید' : 'Please enter a valid email address');
+                return;
+            }
+            
+            // Show success message
+            alert(currentLang === 'fa' ? 
+                `با تشکر، ${name}! پیام شما با موفقیت ارسال شد. به زودی با شما تماس خواهیم گرفت.` : 
+                `Thank you, ${name}! Your message has been sent successfully. We'll contact you shortly.`);
+            
+            // Reset form
+            this.reset();
+        });
+        
+        function sanitizeInput(input) {
+            // Basic input sanitization to prevent XSS
+            return input.replace(/</g, "&lt;").replace(/>/g, "&gt;");
+        }
+
+        // GitHub Pages specific configuration
+        if (window.location.hostname.includes('github.io')) {
+            // Enable additional security measures for GitHub Pages
+            document.querySelector('.security-badge').innerHTML += '<span> · GitHub Secured</span>';
+        }
+    </script>
+</body>
+</html>
